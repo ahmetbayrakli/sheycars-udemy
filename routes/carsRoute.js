@@ -32,7 +32,7 @@ router.post("/editcar", async (req, res) => {
 
     await car.save();
 
-    res.send("Car details updated successfully");
+    res.send("Araç Detayları Başarıyla Değiştirildi");
   } catch (error) {
     return res.status(400).json(error);
   }
@@ -42,7 +42,7 @@ router.post("/deletecar", async (req, res) => {
   try {
     await Car.findOneAndDelete({ _id: req.body.carid });
 
-    res.send("Car deleted successfully");
+    res.send("Araç Başarıyla Silindi");
   } catch (error) {
     return res.status(400).json(error);
   }

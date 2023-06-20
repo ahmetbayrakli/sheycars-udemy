@@ -28,9 +28,9 @@ function AdminHome() {
       <Row justify="center" gutter={16} className="mt-2">
         <Col lg={20} sm={24}>
           <div className="d-flex justify-content-between align-items-center">
-            <h3 className="mt-1 mr-2">Admin Panel</h3>
+            <h3 className="mt-1 mr-2">Admin Paneli</h3>
             <button className="btn1">
-              <a href="/addcar">ADD CAR</a>
+              <a href="/addcar">Araç Ekle</a>
             </button>
           </div>
         </Col>
@@ -48,7 +48,7 @@ function AdminHome() {
                 <div className="car-content d-flex align-items-center justify-content-between">
                   <div className="text-left pl-2">
                     <p>{car.name}</p>
-                    <p> Rent Per Hour {car.rentPerHour} /-</p>
+                    <p> Saatlik Kiralama Ücreti {car.rentPerHour} /-</p>
                   </div>
 
                   <div className="mr-4">

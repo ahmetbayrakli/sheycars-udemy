@@ -1,11 +1,11 @@
 {
-  "name": "sheycars",
+  "name": "ahmetcars",
   "version": "1.0.0",
-  "description": "",
+  "description": "ahmet cars araç kiralama hizmetleri",
   "main": "index.js",
   "engines": {
-    "node" : "15.7.0",
-    "npm" : "7.4.3"
+    "node": "15.7.0",
+    "npm": "7.4.3"
   },
   "scripts": {
     "client-install": "npm install --prefix client",
@@ -15,7 +15,7 @@
     "start": "node server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "author": "",
+  "author": "ahmet bayraklı",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
@@ -23,5 +23,9 @@
     "nodemon": "^2.0.14",
     "stripe": "^8.184.0",
     "uuid": "^8.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
   }
 }

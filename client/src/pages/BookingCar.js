@@ -9,7 +9,7 @@ import { bookCar } from "../redux/actions/bookingActions";
 import StripeCheckout from "react-stripe-checkout";
 import AOS from 'aos';
 
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
 const { RangePicker } = DatePicker;
 function BookingCar({ match }) {
   const { cars } = useSelector((state) => state.carsReducer);
@@ -78,17 +78,17 @@ function BookingCar({ match }) {
 
         <Col lg={10} sm={24} xs={24} className="text-right">
           <Divider type="horizontal" dashed>
-            Car Info
+            Araç Bilgileri
           </Divider>
           <div style={{ textAlign: "right" }}>
             <p>{car.name}</p>
-            <p>{car.rentPerHour} Rent Per hour /-</p>
-            <p>Fuel Type : {car.fuelType}</p>
-            <p>Max Persons : {car.capacity}</p>
+            <p>{car.rentPerHour} Saatlik Kira Ücreti /-</p>
+            <p>Yakıt Türü : {car.fuelType}</p>
+            <p>Kapasite : {car.capacity}</p>
           </div>
 
           <Divider type="horizontal" dashed>
-            Select Time Slots
+           Zaman Aralığını Seç
           </Divider>
           <RangePicker
             showTime={{ format: "HH:mm" }}
@@ -102,15 +102,15 @@ function BookingCar({ match }) {
               setShowModal(true);
             }}
           >
-            See Booked Slots
+            Kiralanmış Zamanları Gör
           </button>
           {from && to && (
             <div>
               <p>
-                Total Hours : <b>{totalHours}</b>
+                Toplam Saat : <b>{totalHours}</b>
               </p>
               <p>
-                Rent Per Hour : <b>{car.rentPerHour}</b>
+                Saatlik Ücret : <b>{car.rentPerHour}</b>
               </p>
               <Checkbox
                 onChange={(e) => {
@@ -121,20 +121,20 @@ function BookingCar({ match }) {
                   }
                 }}
               >
-                Driver Required
+                Sürücü
               </Checkbox>
 
-              <h3>Total Amount : {totalAmount}</h3>
+              <h3>Toplam Tutar : {totalAmount}</h3>
 
               <StripeCheckout
                 shippingAddress
                 token={onToken}
-                currency='inr'
+                currency='TRY'
                 amount={totalAmount * 100}
                 stripeKey="pk_test_51IYnC0SIR2AbPxU0TMStZwFUoaDZle9yXVygpVIzg36LdpO8aSG8B9j2C0AikiQw2YyCI8n4faFYQI5uG3Nk5EGQ00lCfjXYvZ"
               >
                   <button className="btn1">
-                Book Now
+                Kirala
               </button>
               </StripeCheckout>
 
@@ -148,7 +148,7 @@ function BookingCar({ match }) {
             visible={showModal}
             closable={false}
             footer={false}
-            title="Booked time slots"
+            title="Kiralanmış Zamanlar"
           >
             <div className="p-2">
               {car.bookedTimeSlots.map((slot) => {
@@ -166,7 +166,7 @@ function BookingCar({ match }) {
                     setShowModal(false);
                   }}
                 >
-                  CLOSE
+                  Kapat
                 </button>
               </div>
             </div>

@@ -6,7 +6,7 @@ export const alertsReducer=(state=initialData , action)=>{
 
     switch(action.type)
     {
-          case 'LOADING' : {
+          case 'Yükleniyor' : {
               return{
                   ...state,
                   loading : action.payload

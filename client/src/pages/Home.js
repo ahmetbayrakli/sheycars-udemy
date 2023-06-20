@@ -93,11 +93,11 @@ function Home() {
 
                                     <div className='text-left pl-2'>
                                         <p>{car.name}</p>
-                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
+                                        <p> Saatlik Kiralama Ücreti {car.rentPerHour} /-</p>
                                     </div>
 
                                     <div>
-                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
+                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Şimdi Kirala</Link></button>
                                     </div>
 
                                </div>

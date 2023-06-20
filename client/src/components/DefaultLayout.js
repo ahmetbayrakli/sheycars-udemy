@@ -11,7 +11,7 @@ function DefaultLayout(props) {
          
           href="/"
         >
-          Home
+          Ana Sayfa
         </a>
       </Menu.Item>
       <Menu.Item>
@@ -19,7 +19,7 @@ function DefaultLayout(props) {
           
           href="/userbookings"
         >
-          Bookings
+          Kiralamalarım
         </a>
       </Menu.Item>
       <Menu.Item>
@@ -34,7 +34,7 @@ function DefaultLayout(props) {
           localStorage.removeItem('user');
           window.location.href='/login'
       }}>
-          <li style={{color:'orangered'}}>Logout</li>
+          <li style={{color:'orangered'}}>Çıkış</li>
       </Menu.Item>
     </Menu>
   );
@@ -44,7 +44,7 @@ function DefaultLayout(props) {
           <Row gutter={16} justify='center'>
               <Col lg={20} sm={24} xs={24}>
               <div className="d-flex justify-content-between">
-             <h1 ><b><Link to='/' style={{color:'orangered'}}>SheyCars</Link></b></h1>
+             <h1 ><b><Link to='/' style={{color:'orangered'}}>AhmetCars</Link></b></h1>
 
           <Dropdown overlay={menu} placement="bottomCenter">
             <Button>{user.username}</Button>
@@ -63,7 +63,7 @@ function DefaultLayout(props) {
 
            
 
-           <p>SHEY</p>
+           <p>Ahmet Bayraklı</p>
           
       </div>
     </div>

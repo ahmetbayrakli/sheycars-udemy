@@ -39,7 +39,7 @@ function EditCar({ match }) {
               layout="vertical"
               onFinish={onFinish}
             >
-              <h3>Edit Car</h3>
+              <h3>Aracı Düzenle</h3>
 
               <hr />
               <Form.Item

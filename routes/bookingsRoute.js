@@ -36,7 +36,7 @@ router.post("/bookcar", async (req, res) => {
       car.bookedTimeSlots.push(req.body.bookedTimeSlots);
 
       await car.save();
-      res.send("Your booking is successfull");
+      res.send("Kirlama Başarılı");
     } else {
       return res.status(400).json(error);
     }

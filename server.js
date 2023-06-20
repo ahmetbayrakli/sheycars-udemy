@@ -24,10 +24,10 @@ if(process.env.NODE_ENV==='production')
 
 }
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('Merhaba Ahmet Bayraklı'))
 
 
  
 
 
-app.listen(port, () => console.log(`Node JS Server Started in Port ${port}`))
+app.listen(port, () => console.log(`Node JS Sunucusu Port ${port} Başarıyla Başlatıldı`))
